@@ -1,0 +1,1 @@
+Bundan sonra çalışmalarımız burdan yürüteceğiz.
