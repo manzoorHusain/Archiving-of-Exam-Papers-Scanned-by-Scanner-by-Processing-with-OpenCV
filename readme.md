@@ -1,1 +1,1 @@
-Bundan sonra çalışmalarımız burdan yürüteceğiz.
+Bundan sonra çalışmalarımızı burdan yürüteceğiz. Herkes kendi branchta çalışacak ve hepimiz kolay bir şekilde herkesin yaptığı çalışmasını görebileceğiz.
