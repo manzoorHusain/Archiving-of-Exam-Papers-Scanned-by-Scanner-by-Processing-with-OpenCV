@@ -70,6 +70,7 @@ blurImage = cv.GaussianBlur(grayImage,(5, 5), 1)
 cannyImage = cv.Canny(blurImage,10,70)
 threshImage  =  cv.threshold(grayImage, 150,255,cv.THRESH_BINARY_INV)[1]
 
+print("Thresh size: ",len(threshImage.shape))
 
 contours, hierarchy = cv.findContours(cannyImage, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE) # FIND ALL CONTOURS
 cv.drawContours(imgContours, contours, -1, (0, 255, 0), 1) 
@@ -90,7 +91,7 @@ if biggestPoints.size != 0:
     imgWarpGray = cv.cvtColor(imgWarpColored,cv.COLOR_BGR2GRAY) # CONVERT TO GRAYSCALE
     imgThresh = cv.threshold(imgWarpGray, 170, 255,cv.THRESH_BINARY_INV )[1] # APPLY THRESHOLD AND INVERSE
 
-
+    print("thresh size",len(imgThresh.shape))
     imageArray =[new_img,imgWarpColored,imgWarpGray,imgThresh]
     allImages = utlis.stackImages(imageArray,1)
     cv.imshow("All Images",allImages )
@@ -104,8 +105,13 @@ if biggestPoints.size != 0:
     myPixelVal = np.zeros((11,10)) # TO STORE THE NON ZERO VALUES OF EACH BOX , ten rows and 11 columns
     #! notes: burad np.zeros((10,11)) mi yoksa np.zeros((11,10)) olmasi gerekmektedir.
     # print(myPixelVal)
+    cv.imshow('First image',boxes[0])
+    cv.imshow('11th  image',boxes[1])
+    cv.imshow('12th image',boxes[11])
+    cv.imshow('13th image',boxes[12])
     for image in boxes:
         #cv2.imshow(str(countR)+str(countC),image)
+
         totalPixels = cv.countNonZero(image)
         myPixelVal[countC][countR]= totalPixels
         countR += 1

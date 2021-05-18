@@ -1,2 +1,0 @@
-This is info file.
-Second line added here.
