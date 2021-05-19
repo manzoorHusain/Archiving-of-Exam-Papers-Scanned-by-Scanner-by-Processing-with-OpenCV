@@ -4,36 +4,35 @@ import utils
 from pyzbar import pyzbar
 
 
-def get_qrcode(img, image):
+def get_qrcode(img):
     barkodlar = pyzbar.decode(img)
     for barkod in barkodlar:
         (x, y, w, h) = barkod.rect
-        cv.rectangle(image, (x, y), (x + w, y + h), (100, 50, 250), 2)
+        cv.rectangle(img, (x, y), (x + w, y + h), (100, 50, 250), 2)
 
         qrBilgi = barkod.data.decode('utf-8')
         barkodTipi = barkod.type
         text = "{} ( {} )".format(qrBilgi, barkodTipi)
-        # cv.putText(img, text, (x, y - 15),
-        #            cv.FONT_HERSHEY_COMPLEX, 0.5, (100, 50, 250), 2)
+        cv.putText(img, text, (x, y - 15),
+                   cv.FONT_HERSHEY_COMPLEX, 0.5, (100, 50, 250), 2)
 
-        print("barkodtan Cikarilan bilgiler : \n barkod tipi: {}\n barkod icindeki bilgi : \n{}".format(
-            barkodTipi, qrBilgi))
-    # cv.imshow("img", image)
+        # print("barkodtan Cikarilan bilgiler : \n barkod tipi: {}\n barkod icindeki bilgi : \n{}".format(
+        # barkodTipi, qrBilgi))
+    # cv.imshow("img", img)
     return qrBilgi
 
 
-def get_tc():
-    img = cv.imread('Photos/qr2-1.png')
+def get_tc(img):
+    # img = cv.imread('Photos/qr2-1.png')
     gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
     width = 900
     height = 1200
     img = cv.resize(img, (width, height))
     imgC = cv.resize(img, (width, height))
-    imgC[:, 0:width//2] = (254, 254, 254)
-    imgC[:, width//2:width-1] = imgC[:, width//2:width-1]
-    output = imgC.copy()
-    gray = cv.cvtColor(imgC, cv.COLOR_BGR2GRAY)
+    img = imgC[:, width//2:width-1]
+    output = img.copy()
+    gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
     blur = cv.GaussianBlur(gray, (5, 5), 1)
     canny = cv.Canny(blur, 10, 15)
 
@@ -45,14 +44,14 @@ def get_tc():
     index = None
     for i, c in enumerate(contours):
         # alan
-        if cv.contourArea(c) > 9000:
+        if cv.contourArea(c) > 900:
             cv.drawContours(img, contours, i, (255, 0, 255), 2)
             index = i
             # print(cv.contourArea(c))
 
             # print(len(cv.approxPolyDP(c, cv.arcLength(c, True)*0.1, True)))
-
     mask = np.zeros_like(img)
+    # cv.imshow('img', img)
 
     cv.drawContours(mask, contours, index, (255, 255, 255), -1)
     # cv.imshow('mask2', mask)
@@ -142,17 +141,32 @@ def get_tc():
             myIndexVal = np.where(arr == np.amax(arr))
             myIndex.append(myIndexVal[0][0])
         # print(myIndex)
-        tc = ''.join([str(elem) for elem in myIndex])
-        print("Ogrencinin kimlik numarasi: ", tc)
+        final_result = ''.join([str(elem) for elem in myIndex])
+        # print("Ogrencinin kimlik numarasi: ", final_result)
 
-        # img = cv.imread('Photos/qr2-1.png')
-
-        # img = cv.resize(img, (width, height))
-        qr_code = get_qrcode(img[0:height//4, 0:width//2], img)
-        cv.imshow('img', img)
-
-        cv.waitKey(0)
-        return (tc, qr_code, img)
+    cv.waitKey(0)
+    return final_result
 
 
-get_tc()
+width = 900
+height = 1200
+images = []
+img = cv.imread('Photos/1.png')
+img = cv.resize(img, (width, height))
+images.append(img)
+img = cv.imread('Photos/2.png')
+img = cv.resize(img, (width, height))
+images.append(img)
+img = cv.imread('Photos/3.png')
+img = cv.resize(img, (width, height))
+images.append(img)
+img = cv.imread('Photos/4.png')
+img = cv.resize(img, (width, height))
+images.append(img)
+
+for i, im in enumerate(images):
+    print(i+1, " resim")
+    tc = get_tc(im)
+    print("tc: ", tc)
+    qr_code = get_qrcode(im)
+    print("qr_code: ", qr_code)
