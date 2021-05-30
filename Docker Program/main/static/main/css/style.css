@@ -1,0 +1,36 @@
+/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+html,
+body,
+.view {
+  height: 100%; }
+#carousel-example-1z{
+  /* height: 80%;  */
+}
+/* Half Page Carousel itself*/
+.carousel {
+  /* top: 26px; */
+
+  height: 80%;   }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #929FBA; }
+
+/* .dropdown-toggle::after{
+  border: 0px;
+  content: none !important;
+} */
+/* .nav-item{
+  overflow: auto;
+
+} */
