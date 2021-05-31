@@ -130,6 +130,7 @@ def get_tc(img):
             # cv2.imshow(str(countR)+str(countC),image)
             totalPixels = cv.countNonZero(image)
             myPixelVal[countC][countR] = totalPixels
+            print(totalPixels)
             countR += 1
             if (countR == 10):
                 countR = 0
