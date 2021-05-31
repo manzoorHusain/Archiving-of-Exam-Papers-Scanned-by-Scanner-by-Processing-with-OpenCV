@@ -1,0 +1,7 @@
+1. Bir dosyadaki butun resimleri okunmasi
+https://stackoverflow.com/questions/30230592/loading-all-images-using-imread-from-a-given-folder
+
+2.Pick images of root folder from sub-folder(alt dosyalardan ust dizindeki dosyalardan resimlere nasil ulasilir)
+https://stackoverflow.com/questions/3655059/pick-images-of-root-folder-from-sub-folder
+
+

@@ -4,7 +4,7 @@ import numpy as np
 # TO STACK ALL THE IMAGES IN ONE WINDOW
 
 
-def stackImages(imgArray, scale, lables=[]):
+def stack_images(imgArray, scale, lables=[]):
     rows = len(imgArray)
     cols = len(imgArray[0])
     rowsAvailable = isinstance(imgArray[0], list)
@@ -43,7 +43,7 @@ def stackImages(imgArray, scale, lables=[]):
                 cv2.rectangle(ver, (c*eachImgWidth, eachImgHeight*d), (c*eachImgWidth+len(
                     lables[d][c])*13+27, 30+eachImgHeight*d), (255, 255, 255), cv2.FILLED)
                 cv2.putText(ver, lables[d][c], (eachImgWidth*c+10, eachImgHeight *
-                                                d+20), cv2.FONT_HERSHEY_COMPLEX, 0.7, (255, 0, 255), 2)
+                                                d+20), cv2.FONT_HERSHEY_COMPLEX, 0.5, (255, 0, 255), 1)
     return ver
 
 

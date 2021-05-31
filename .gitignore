@@ -1,4 +1,13 @@
-
-Puan Hesaplanmasi/__pycache__
+.__pycache__
+Puan_hesaplanmasi/
+Error_Handling/full_blank
+Error_Handling/less_than50_percent_marked
+Error_Handling/more_than_80_percent_marked
+Error_Handling/one_column_blank
+Error_Handling/double_marked
+Error_Handling/__pycache__
 .vscode
 osas/
+Kimlikno_Alinmasi/
+Photos1/
+website/
