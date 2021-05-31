@@ -1,0 +1,193 @@
+{% load static%}
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:8000/ -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>OMU Sınav Arşivleme Sistemi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'main/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/style.min.css' %}" rel="stylesheet">
+    <link href="{% static 'main/css/all.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/style2.css'%}">
+    <link rel="stylesheet" href="{% static 'main/fontawesome-free-5.15.2-web/css/all.css' %}">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <nav class="u-clearfix">
+        <div class="logo">
+            <a href="/" rel="noopener">
+                <h2>OMU Sınav Arşivleme Sistemi </h2>
+            </a>
+        </div>
+        <div class="release-notes">
+            <p> <a href="{% url 'main:list' %}" target="" rel="noopener">Sistem Veritabani
+                </a> </p>
+        </div>
+    </nav>
+    <main class=" container">
+        <div class=" contain w-50 text-center mx-auto p-5">
+
+            {% if tc %}
+
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">T.C.</th>
+                        <th scope="col">Sinav Bilgileri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x,y in tc%}
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td>{{x}}</td>
+                        <td>{{y}}</td>
+                    </tr>
+
+                    {%endfor%}
+
+                </tbody>
+            </table>
+            {%elif sinavList%}
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">T.C.</th>
+                        <th scope="col">Bölüm</th>
+                        <th scope="col">Ders</th>
+                        <th scope="col">Sınav Tipi</th>
+                        <th scope="col">Sınav Kağıdı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for x in sinavList%}
+
+                    <tr>
+                        <th scope="row">{{forloop.counter}}</th>
+                        <td> {{x.tc}}
+                        </td>
+                        <td>{{x.bolum}}</td>
+                        <td>{{x.ders}}</td>
+                        <td>{{x.sinav_tipi}}</td>
+                        <td><a href="{{x.kagit.url}}"><i class="fa fa-image"></i></a></td>
+                    </tr>
+
+
+
+                    {%endfor%}
+                </tbody>
+            </table>
+            {%else%}
+            <form action="/process/" method="POST" enctype="multipart/form-data">
+                {% csrf_token%}
+                <div class="upload_button"><i class="fa fa-upload upload_i"></i></div>
+
+                <input type="file" name="img" accept="image/*" multiple>
+                <!-- {{form}} -->
+                <input type="submit">
+                <h2 class="num"></h2>
+            </form>
+            {% endif%}
+            {% if qr_code %}
+            <h2>Cikarilan qr_code bilgileri: {{qr_code}}</h2>
+            {% endif%}
+        </div>
+
+    </main>
+    <footer class="u-clearfix ">
+        <!-- <a href="https://docs.djangoproject.com/en/3.1/" target="_blank" rel="noopener">
+            <div class="option one">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path d="M0 0h24v24H0V0z" id="a"></path>
+                    </defs>
+                    <clippath id="b">
+                        <use overflow="visible" xlink:href="#a"></use>
+                    </clippath>
+                    <path clip-path="url(#b)"
+                        d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z">
+                    </path>
+                </svg>
+                <div>
+                    <h4>Django Documentation</h4>
+                    <p>Topics, references, &amp; how-to’s</p>
+                </div>
+            </div>
+        </a> -->
+        <!-- <a target="_blank" rel="noopener">
+            <div class="option two">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path
+                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z">
+                    </path>
+                </svg>
+                <div>
+                    <h4>Front-End: Ammar RAHMOUNI</h4>
+        </div>
+        </div>
+        </a> -->
+        <a target="_blank" rel="noopener">
+            <div class="option two">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0V0z" fill="none"></path>
+                    <path
+                        d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z">
+                    </path>
+                </svg>
+                <div>
+                    <h4>Full Stack: Tarık KAİATOĞLU</h4>
+                    <!-- <p>Get started with Django</p> -->
+                </div>
+            </div>
+        </a>
+        <!-- <a href="https://www.djangoproject.com/community/" target="_blank" rel="noopener">
+            <div class="option three">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                        d="M16.5 13c-1.2 0-3.07.34-4.5 1-1.43-.67-3.3-1-4.5-1C5.33 13 1 14.08 1 16.25V19h22v-2.75c0-2.17-4.33-3.25-6.5-3.25zm-4 4.5h-10v-1.25c0-.54 2.56-1.75 5-1.75s5 1.21 5 1.75v1.25zm9 0H14v-1.25c0-.46-.2-.86-.52-1.22.88-.3 1.96-.53 3.02-.53 2.44 0 5 1.21 5 1.75v1.25zM7.5 12c1.93 0 3.5-1.57 3.5-3.5S9.43 5 7.5 5 4 6.57 4 8.5 5.57 12 7.5 12zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 5.5c1.93 0 3.5-1.57 3.5-3.5S18.43 5 16.5 5 13 6.57 13 8.5s1.57 3.5 3.5 3.5zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z">
+                    </path>
+                </svg>
+                <div>
+                    <h4>Django Community</h4>
+                    <p>Connect, get help, or contribute</p>
+                </div>
+            </div>
+        </a> -->
+    </footer>
+    <script type="text/javascript" src="{% static 'main/js/jquery-3.4.1.min.js' %}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'main/js/popper.min.js' %}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{% static 'main/js/bootstrap.min.js' %}"></script>
+    <!-- MDB core JavaScript -->
+    <script>
+        $(function () {
+            console.log('done')
+            // console.log($("input[type='file']").target)
+            // if ($("input[type='file']").val() == "") {
+
+            // } else {
+
+            // }
+            $("input[type='file']").change(function (e) {
+                console.log(typeof $(this).val());
+                console.log(e.target.files.length);
+                var length = e.target.files.length;
+                $('.num').text(length + " File/s")
+            })
+        });
+    </script>
+</body>
+
+</html>
