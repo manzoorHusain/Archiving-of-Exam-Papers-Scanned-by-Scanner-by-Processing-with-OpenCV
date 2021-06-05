@@ -21,7 +21,7 @@ You're sections headers will be used to reference location of destination.
 - [How To Use](#how-to-use)
 - [References](#references)
 - [License](#license)
-- [Author Info](#author-info)
+- [Contributors](#Contributors)
 
 ---
 
@@ -41,6 +41,8 @@ After that the optic form gets processed.
   ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
 - 📚 &nbsp;
   ![OpenCv](https://img.shields.io/badge/-OpenCv-333333?style=flat&logo=openCv)
+- 🚢 &nbsp;
+  ![Docker](https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker)
 - 🌐 &nbsp;
   ![HTML5](https://img.shields.io/badge/-HTML5-333333?style=flat&logo=HTML5)
   ![CSS](https://img.shields.io/badge/-CSS-333333?style=flat&logo=CSS3&logoColor=1572B6)
@@ -85,5 +87,8 @@ After that the optic form gets processed.
 
 ---
 
-
-
+## Contributors
+- Manzoor Hussain
+- Tarek 
+- Ammar Rahmouni
+- Zaid Ahmed
