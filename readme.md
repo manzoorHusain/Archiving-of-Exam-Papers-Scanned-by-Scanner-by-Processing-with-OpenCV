@@ -84,7 +84,8 @@ After that the optic form gets processed.
 - https://github.com/murtazahassan/Optical-Mark-Recognition-OPENCV
 - https://www.udemy.com/course/python-for-computer-vision-with-opencv-and-deep-learning/learn/lecture/12257866?start=0#overview
 - https://opencv.org/
-
+- https://github.com/prash29/Barcode-Reader/blob/master/barcode.py
+- https://answers.opencv.org/question/230784/finding-rectangle-contours-in-an-image/
 [Back To The Top](#read-me-template)
 
 ---
