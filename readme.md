@@ -4,10 +4,10 @@
 <div>
     <tr>
         <td>
-          <img src="KimlikNo Alinmasi\Photos\qr2-1.png" width="220" title="Sistem Arayüzü">
+          <img src="Readme_photos\qr2-1.png" width="220" title="Sistem Arayüzü">
         </td>
         <td>
-          <img src="KimlikNo Alinmasi\Photos\qr2-1.png"width="220" title="Veri Tabanı">
+          <img src="Readme_photos\qr2-1.png"width="220" title="Veri Tabanı">
         </td>
     </tr>
 </div>
