@@ -3,15 +3,15 @@
 <link rel="stylesheet" type="text/css" media="all" href="osas\osas\main\static\main\css\md_styles.css" />
 <div class="satir">
   <div class="sutun">
-    <img src="osas\osas\media\1.png" alt="Sinav_Kagit_Ornegi" style="width:100%">
+    <img src="osas\osas\media\1.png" alt="Sinav_Kagit_Ornegi" style="width:30%">
   </div>
   <div class="sutun">
-    <img src="osas\osas\media\Segmentasyon_ goruntusu.png" alt="Kimlik_Numarası_Alinmasi" style="width:80%">
+    <img src="osas\osas\media\Segmentasyon_ goruntusu.png" alt="Kimlik_Numarası_Alinmasi" style="width:25%">
       <div class="satir">
-        <img src="osas\osas\media\Qr_Kodun_Alinmasi.png"alt="Qr_kodu_Alinmasi" style="width:80%">
+        <img src="osas\osas\media\Qr_Kodun_Alinmasi.png"alt="Qr_kodu_Alinmasi" style="width:25%">
       </div>
       <div class="satir">
-        <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" style="width:80%">
+        <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" style="width:25%">
       </div>
   </div>
 </div>
