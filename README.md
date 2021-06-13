@@ -1,4 +1,4 @@
-# Scanner İle Taranan Sınav Kağıtlarının OpenCv ile İşlenerek Arşivlenmesi
+# Archiving of Exam Papers Scanned by Scanner by Processing with OpenCV
 
 <link rel="stylesheet" type="text/css" media="all" href="osas\osas\main\static\main\css\md_styles.css" />
 
@@ -6,17 +6,18 @@
     <img src="osas\osas\media\1.png" alt="Sinav_Kagit_Ornegi" style="width:30%">
   </div>
   <div class="sutun">
-    <img src="osas\osas\media\Segmentasyon_ goruntusu.png" alt="Kimlik_Numarası_Alinmasi" style="width:25%">
+    <img src="osas\osas\media\Segmentasyon_ goruntusu.png" alt="Kimlik_Numarası_Alinmasi">
       <div class="satir">
-        <img src="osas\osas\media\Qr_Kodun_Alinmasi.png"alt="Qr_kodu_Alinmasi" style="width:25%">
+        <img src="osas\osas\media\Qr_Kodun_Alinmasi.png"alt="Qr_kodu_Alinmasi">
       </div>
       <div class="satir">
-        <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" style="width:25%">
+        <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" >
       </div>
   </div>
 
+<br/>
 
-> The way algorithm works. Showen in the upper pictures
+### The way algorithm works shown in the upper pictures.
 
 ---
 
@@ -58,13 +59,13 @@ After that the optic form gets processed.
 ## How To Use
 
 #### Installation
-
->git clone https://github.com/457341/Bitirme-Projesi.git
-
+```html
+git clone https://github.com/457341/Bitirme-Projesi.git
+```
 #### Go the file path
-
->cd Bitirme-projesi/osas/osas
-
+```html
+cd Bitirme-projesi/osas/osas
+```
 #### API Reference
 
 ```html
