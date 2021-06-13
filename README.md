@@ -1,31 +1,26 @@
-
-
 # Scanner İle Taranan Sınav Kağıtlarının OpenCv ile İşlenerek Arşivlenmesi
-<div>
-    <tr>
-        <td>
-          <img src="osas\osas\media\1.png" width="220" title="Sistem Arayüzü">
-        </td>
-        <td>
-          <img src="osas\osas\media\double_marked.jpeg"width="220" title="Veri Tabanı">
-        </td>
-    </tr>
+
+<link rel="stylesheet" type="text/css" media="all" href="osas\osas\main\static\main\css\md_styles.css" />
+<div class="satir">
+  <div class="sutun">
+    <img src="osas\osas\media\1.png" alt="Sinav_Kagit_Ornegi" style="width:100%">
+  </div>
+  <div class="sutun">
+    <img src="osas\osas\media\Segmentasyon_ goruntusu.png" alt="Kimlik_Numarası_Alinmasi" style="width:80%">
+      <div class="satir">
+        <img src="osas\osas\media\Qr_Kodun_Alinmasi.png"alt="Qr_kodu_Alinmasi" style="width:80%">
+      </div>
+      <div class="satir">
+        <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" style="width:80%">
+      </div>
+  </div>
 </div>
 
-> Sistemin Arayüzü ile Sistemin Veri Taban Sistemi
+
+> The way algorithm works. Showen in the upper pictures
 
 ---
 
-### Table of Contents
-You're sections headers will be used to reference location of destination.
-
-- [Description](#description)
-- [How To Use](#how-to-use)
-- [References](#references)
-- [License](#license)
-- [Contributors](#Contributors)
-
----
 
 ## Description
 
@@ -35,9 +30,7 @@ Then the right hand side of the image gets processed. First the box that contain
 
 After that the optic form gets processed.
 
-#### Technologies
-
-<h3> 🛠 &nbsp;Tech Stack</h3>
+### 🛠 &nbsp; Technologies
 
 - 💻 &nbsp;
   ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
@@ -60,9 +53,7 @@ After that the optic form gets processed.
 - 🔧 &nbsp;
   ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
   ![Jupyter](https://img.shields.io/badge/-Jupyter-333333?style=flat&logo=jupyter)
-
-[Back To The Top](#read-me-template)
-
+  
 ---
 
 ## How To Use
@@ -71,12 +62,15 @@ After that the optic form gets processed.
 
 >git clone https://github.com/457341/Bitirme-Projesi.git
 
+#### Go the file path
+
+>cd Bitirme-projesi/osas/osas
+
 #### API Reference
 
 ```html
     docker-compose up
 ```
-[Back To The Top](#read-me-template)
 
 ---
 
@@ -89,13 +83,4 @@ After that the optic form gets processed.
 - https://www.youtube.com/watch?v=oXlwWbU8l2o&t=5438s&ab_channel=freeCodeCamp.orgfreeCodeCamp.org
 - https://www.youtube.com/watch?v=WQeoO7MI0Bs&t=4544s&ab_channel=Murtaza%27sWorkshop-RoboticsandAIMurtaza%27sWorkshop-RoboticsandAIDo%C4%9Fruland%C4%B1
 - https://www.youtube.com/playlist?list=PLS1QulWo1RIa7D1O6skqDQ-JZ1GGHKK-K
-[Back To The Top](#read-me-template)
-
----
-
-## Contributors
-- Manzoor Hussain
-- Tarek 
-- Ammar Rahmouni
-- Zaid Ahmed
 
