@@ -1,7 +1,7 @@
 # Scanner İle Taranan Sınav Kağıtlarının OpenCv ile İşlenerek Arşivlenmesi
 
 <link rel="stylesheet" type="text/css" media="all" href="osas\osas\main\static\main\css\md_styles.css" />
-<div class="satir">
+
   <div class="sutun">
     <img src="osas\osas\media\1.png" alt="Sinav_Kagit_Ornegi" style="width:30%">
   </div>
@@ -14,7 +14,6 @@
         <img src="osas\osas\media\Sistem_Veri_Tabani.png" alt="Sistemin_Veri_Tabani" style="width:25%">
       </div>
   </div>
-</div>
 
 
 > The way algorithm works. Showen in the upper pictures
