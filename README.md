@@ -1,10 +1,6 @@
 # Archiving of Exam Papers Scanned by Scanner by Processing with OpenCV
 
 
-
----
-
-
 ## Description
 
 After reading the exam image it gets splitted into two rectangles from top to bottom then the program starts processing the QR code on the left hand side. For QR code processing Pyzbar library is used. https://github.com/prash29/Barcode-Reader/blob/master/barcode.py the code in the link above is used to extract information stored inside our QR code.
