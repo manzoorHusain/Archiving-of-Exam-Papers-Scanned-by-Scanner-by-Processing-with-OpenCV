@@ -36,7 +36,7 @@ After that the optic form gets processed.
 ---
 
 ## How To Use
-
+This application is a Dockerized application. To implement this application, the operating system must have Docker downloaded.
 #### Installation
 ```html
 git clone https://github.com/457341/Bitirme-Projesi.git
