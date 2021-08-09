@@ -1,0 +1,4 @@
+pyzbar==0.1.8
+python-dateutil==2.8.1
+#opencv-python-headless==4.5.2.52
+opencv-python==4.5.2.52
